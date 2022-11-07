@@ -51,8 +51,10 @@ class Similarity(Resource):
         parser.add_argument('w1', type=str, required=True, help="Word 1 cannot be blank!", location=['args'])
         parser.add_argument('w2', type=str, required=True, help="Word 2 cannot be blank!", location=['args'])
         args = parser.parse_args()
-        return model.similarity(args['w1'], args['w2']).item()
-
+        if args['w1'] in model.vocab and args['w2'] in model.vocab:
+            return model.similarity(args['w1'], args['w2']).item()
+        else:
+            return 0.0
 
 class MostSimilar(Resource):
     def get(self):
