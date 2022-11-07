@@ -1,4 +1,5 @@
-Flask==1.0.2
-Flask-RESTful==0.3.6
+Flask
+Flask-RESTful
 gensim==3.6.0
-future==0.17.1
+future
+nltk
