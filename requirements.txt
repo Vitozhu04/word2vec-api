@@ -3,3 +3,4 @@ Flask-RESTful
 gensim==3.6.0
 future
 nltk
+flask_cors
